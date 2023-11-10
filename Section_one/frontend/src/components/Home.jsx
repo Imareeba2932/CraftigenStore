@@ -3,161 +3,49 @@ import Fade from 'react-reveal/Fade';
 // import required modules
 import Browse from './Browse';
 import { Link } from 'react-router-dom';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+// import './App.css';
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 
 const Home = () => {
   return (
     <div className=''>
-      <div id="carouselExampleDark" className="carousel carousel-dark slide mt-5">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={0}
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={1}
-            aria-label="Slide 2"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={2}
-            aria-label="Slide 3"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={3}
-            aria-label="Slide 4"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={4}
-            aria-label="Slide 5"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={5}
-            aria-label="Slide 6"
-          />
+      <Swiper
+        spaceBetween={30}
+        // centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+        
+      >
+        <SwiperSlide className="slide1 slide"></SwiperSlide>
+        <SwiperSlide className="slide2 slide"></SwiperSlide>
+        <SwiperSlide className="slide3 slide"></SwiperSlide>
+        <SwiperSlide className="slide4 slide"></SwiperSlide>
+        <SwiperSlide className="slide5 slide"></SwiperSlide>
+        <SwiperSlide className="slide6 slide"></SwiperSlide>
+        {/* <SwiperSlide className="slide7 slide">Slide 7</SwiperSlide> */}
+        {/* <SwiperSlide className="slide8 slide">Slide 8</SwiperSlide> */}
+        {/* <SwiperSlide className="slide9 slide">Slide 9</SwiperSlide> */}
+      </Swiper>
 
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={6}
-            aria-label="Slide 7"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={7}
-            aria-label="Slide 8"
-          />
-          <button
-            type="button"
-            data-bs-target="#carouselExampleDark"
-            data-bs-slide-to={8}
-            aria-label="Slide 9"
-          />
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval={10000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Brass-Ganesha_Banner.jpg?v=1677564309" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top>
-                <h1 className='homeimg3ds fs-9 p-3 mb-5 pb-0' style={{ fontSize: '60px' }}>Free Shiping </h1>
-                <p className='homeimg3ds mb-5 pt-0  fs-6' style={{ marginBottom: '30rem' }}>For All Our Online Stores In India.</p>
-              </Fade>
-
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={2000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Bell_Banner_-_14-04-2022.png?v=1649938773" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top >
-                <button className='btn btn-warning rounded-0 border border-dark homeimg3ds mb-5 p-3 fs-4'>Shop The Collection</button>
-              </Fade>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={3000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Web-Banner-for-Gifiting-catalog_Web.jpg?v=1665123509" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={4000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Resin.jpg?v=1687499076" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={5000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/TBS6292_1a5b4ed3-4727-447a-a5a7-8b37a32d032c.jpg?v=1687500120" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top >
-                <h5 className='homeimg3ds fs-9 p-3' style={{ fontSize: '60px' }}>Wall Ascents</h5>
-                <p className='homeimg3ds mb-5 ' style={{ marginBottom: '30rem' }}>Some representative placeholder content for the first slide.</p>
-                <button className='btn btn-warning border border-dark rounded-0 homeimg3ds mb-5 fs-5'>Shop The Collection</button>
-              </Fade>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={6000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/TBS6292_1a5b4ed3-4727-447a-a5a7-8b37a32d032c.jpg?v=1687500120" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top >
-                <h5 className='homeimg3ds  fs-9 p-3' style={{ fontSize: '60px' }}>Wall Ascents</h5>
-                <p className='homeimg3ds mb-5' style={{ marginBottom: '30rem' }}>Some representative placeholder content for the first slide.</p>
-                <button className='btn btn-warning border-0 homeimg3ds mb-5 fs-5'>Shop The Collection</button>
-              </Fade>
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={7000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Web-Banner_Umbrella-Campaign_2023.jpg?v=1686221213" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top >
-                <h5 className='homeimg3ds fs-1 p-3'>Wall Ascents</h5>
-                <p className='homeimg3ds mb-5' style={{ marginBottom: '30rem' }}>Some representative placeholder content for the first slide.</p>
-                <button className='btn btn-warning border-0 homeimg3ds mb-5 fs-5'>Shop The Collection</button>
-              </Fade>
-
-            </div>
-          </div>
-          <div className="carousel-item" data-bs-interval={8000}>
-            <img src="https://thebombaystore.com/cdn/shop/files/Dwaar_Collection_Banner_-_Low.jpg?v=1648640231" className="d-block w-100" alt="..." />
-            <div className="carousel-caption d-none d-md-block">
-              <Fade top >
-                <h5 className='homeimg3ds fs-1 p-3'>Wall Ascents</h5>
-                <p className='homeimg3ds mb-5' style={{ marginBottom: '30rem' }}>Some representative placeholder content for the first slide.</p>
-                <button className='btn btn-warning  border-0 rounded-0 homeimg3ds mb-5 fs-5'>Shop The Collection</button>
-              </Fade>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="prev"
-        >
-          <span className="carousel-control-prev-icon" aria-hidden="true" />
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleDark"
-          data-bs-slide="next"
-        >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
 
       <div className='container-fluid homebg'>
         <Fade left>

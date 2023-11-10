@@ -3,7 +3,7 @@ body {
 }
 
 .bg_login {
-  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
+  background-image: url('https://files.123freevectors.com/wp-content/original/107062-light-orange-abstract.jpg');
   background-size: cover;
   position: absolute;
 
@@ -43,7 +43,7 @@ body {
 
 .loginbg,
 .signupbg {
-  background-image: url('https://thebombaystore.com/cdn/shop/t/2/assets/unnamed_2.png?v=2193345426704041608');
+  background-image: url('https://wallpapercave.com/wp/wp4706646.jpg');
   background-size: cover;
 }
 
@@ -102,3 +102,43 @@ body {
   color: white;
 
 }
+.mySwiper{
+  /* height: 20rem; */
+  width: 100%;
+  margin-top: 50px;
+  height: 70vh;
+  text-align: center;
+  /* background-image: url(https://i.pinimg.com/originals/91/c1/00/91c1000191a3891a15efcf86b7f09215.png); */
+}
+
+.slide{
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+}
+.slide1{
+  background-image: url('../public/Screenshot\ \(243\).png');
+}
+.slide2{
+  background-image: url('../public/Screenshot\ \(244\).png');
+}
+.slide3{
+  background-image: url('../public/Screenshot\ \(247\).png');
+}
+.slide4{
+  background-image: url('../public/Screenshot\ \(248\).png');
+}
+.slide5{
+  background-image: url('../public/Screenshot\ \(249\).png');
+}
+.slide6{
+  background-image: url('../public/Screenshot\ \(250\).png');
+}
+
+.card-img{
+  height: 300px;
+}
+.fav-card{
+  width: 300px;
+}
+

@@ -15,9 +15,9 @@ const Navbar = () => {
     if (loggedIn) {
       return (
         <>
-          <li className='px-1 py-0 my-0'>
+          {/* <li className='px-1 py-0 my-0'>
             <img width ={60} height={50} className='ms-2 rounded-circle' src={"http://localhost:5000/" + currentUser.avatar} alt="" />
-          </li>
+          </li> */}
           <li>
             <h6 className='px-1 py-2 my-0 text-success'>{currentUser.name}</h6>
           </li>

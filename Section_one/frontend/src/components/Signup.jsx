@@ -14,10 +14,6 @@ const signupSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
 
   password: Yup.string().required('Please Enter your password')
-    .matches(
-      "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
-    )
 });
 
 const Signup = () => {
@@ -86,7 +82,7 @@ const Signup = () => {
 
   return (
 
-    <div className='signupbg p-5 mt-5 mb-5 position-relative'>
+    <div className='signupbg p-5 mb-5 position-relative'>
       <div className="d-flex justify-content-center align-items-center  vh-100  mt-3 ">
         <div className="card w-25 mt-5 shadow-lg rounded-5  ">
           <div className="card-body ">
@@ -109,10 +105,10 @@ const Signup = () => {
                 <input className="form-control mb-2 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
               </div>
 
-              <div>
+              {/* <div>
                 <label htmlFor="Upload File"></label>
                 <input type="file" onChange={uploadFile} />
-              </div>
+              </div> */}
               <div className='d-flex flex-row justify-content-center mt-4'>
                 <input className='mb-2' type='checkbox' /> <span className='mb-2 mx-1'>I agree all statements in Terms of service</span>
               </div>
@@ -120,7 +116,7 @@ const Signup = () => {
                 <button type='submit' className="btn btn-danger w-100 mt-3 rounded-3 mb-5 ">Register</button>
               </div>
 
-              <div class="text-center">
+              {/* <div class="text-center">
                 <p>or sign up with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
@@ -137,7 +133,7 @@ const Signup = () => {
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-github"></i>
                 </button>
-              </div>
+              </div> */}
 
             </form>
           </div>

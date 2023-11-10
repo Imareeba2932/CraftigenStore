@@ -32,9 +32,9 @@ const ListProduct = () => {
         }
         return productList.map((product) => (
             <div className='col-md-4 p-5   my-5 justify-content-center justify-content-evenly'>
-                <div className='card shadow-lg rounded-5'>
+                <div className='card fav-card  shadow-lg'>
                     <img
-                        className="img-fluid rounded-5"
+                        className="img-fluid rounded-5 card-img"
                         src={"http://localhost:5000/" + product.image}
                         alt=""
                     />
